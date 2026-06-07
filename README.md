@@ -1,6 +1,6 @@
 # Jiawei Gao Academic Homepage
 
-This is a first-version GitHub Pages template migrated from the Google Sites homepage at:
+This is a GitHub Pages academic homepage migrated from the Google Sites homepage at:
 
 https://sites.google.com/view/jiaweigao/home
 
@@ -26,3 +26,4 @@ https://gaojiawei321.github.io/
 
 - Add more publications to the Publications section.
 - Replace or add research figures and personal photos as needed.
+- Keep the current role and CV PDF up to date.

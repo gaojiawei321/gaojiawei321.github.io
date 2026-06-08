@@ -356,19 +356,26 @@ h3 {
 
 .timeline article {
   display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 24px;
-  padding: 22px;
+  grid-template-columns: 118px 1fr;
+  gap: 16px;
+  padding: 18px;
 }
 
 .timeline span {
   color: var(--accent-2);
+  font-size: 0.92rem;
   font-weight: 800;
+}
+
+.timeline h3 {
+  margin-bottom: 6px;
+  font-size: 1.08rem;
 }
 
 .timeline p {
   margin-bottom: 0;
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .contact-section {

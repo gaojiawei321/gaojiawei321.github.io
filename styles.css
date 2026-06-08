@@ -148,7 +148,8 @@ h3 {
 }
 
 .hero-actions,
-.publication-links {
+.publication-links,
+.media-card a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -157,7 +158,7 @@ h3 {
 
 .hero-actions a,
 .publication-links a,
-.media-link {
+.media-card a {
   display: inline-flex;
   min-height: 42px;
   align-items: center;
@@ -173,15 +174,14 @@ h3 {
 }
 
 .hero-actions a:nth-child(n+2),
-.publication-links a:nth-child(n+2),
-.media-link {
+.publication-links a:nth-child(n+2) {
   background: transparent;
   color: var(--ink);
 }
 
 .hero-actions a:hover,
 .publication-links a:hover,
-.media-link:hover {
+.media-card a:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
@@ -277,26 +277,20 @@ h3 {
 }
 
 .mars {
-  background-image: url("https://lh4.googleusercontent.com/Il4xvxFyz2krD46MKSIKdPVW8fCknNsz3QoBSIKOhIshuPG3RCmiNOeE1vzkHQdIHPsWGONSyluan4Hd6L6e7zjxIfxsny1wlTLVsp10WcdrWlsckKAKGxAeXZ2qhbEzme2PILnwU84%3Dw1280");
+  background-image: url("assets/images/mars-atmosphere.jpg");
 }
 
 .venus {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/85/Venus_globe.jpg");
+  background-image: url("assets/images/venus.png");
 }
 
 .earth {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_Earth_America_2002.jpg");
-}
-
-.split-section {
-  display: grid;
-  grid-template-columns: 0.42fr 0.58fr;
-  gap: 40px;
-  align-items: start;
+  background-image: url("assets/images/earth.jpg");
 }
 
 .publication {
   padding: 28px;
+  margin-bottom: 18px;
 }
 
 .publication p {
@@ -305,6 +299,29 @@ h3 {
 
 .publication .journal {
   color: var(--accent-2);
+}
+
+.publication-list {
+  display: grid;
+  gap: 12px;
+}
+
+.publication-list article {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 18px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.publication-list span {
+  color: var(--accent-2);
+  font-weight: 800;
+}
+
+.publication-list p {
+  margin-bottom: 0;
+  color: #344240;
 }
 
 .cv-section {
@@ -333,7 +350,6 @@ h3 {
   color: var(--muted);
 }
 
-.media-section,
 .contact-section {
   display: grid;
   grid-template-columns: 0.58fr 0.42fr;
@@ -341,9 +357,42 @@ h3 {
   align-items: start;
 }
 
-.media-section p,
 .contact-section address {
   color: var(--muted);
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.media-card {
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(24, 36, 34, 0.05);
+}
+
+.media-card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.media-card div {
+  padding: 18px;
+}
+
+.media-card p:not(.tag) {
+  color: var(--muted);
+}
+
+.media-card a {
+  width: fit-content;
+  margin-top: 14px;
+  background: transparent;
+  color: var(--ink);
 }
 
 .gallery-grid figure {
@@ -408,10 +457,15 @@ address {
 
   .research-grid,
   .gallery-grid,
-  .split-section,
+  .media-grid,
   .media-section,
   .contact-section {
     grid-template-columns: 1fr;
+  }
+
+  .publication-list article {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .timeline article {

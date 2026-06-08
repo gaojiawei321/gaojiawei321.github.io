@@ -301,6 +301,28 @@ h3 {
   color: var(--accent-2);
 }
 
+.role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -2px 0 16px;
+}
+
+.role-tags span,
+.publication-list strong {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 6px;
+  padding: 2px 8px;
+  background: #eef5f1;
+  color: var(--accent-3);
+  border: 1px solid #d8e6dd;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
 .publication-list {
   display: grid;
   gap: 12px;

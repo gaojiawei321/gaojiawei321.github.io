@@ -228,8 +228,7 @@ h3 {
   color: var(--muted);
 }
 
-.research-grid,
-.gallery-grid {
+.research-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
@@ -417,25 +416,6 @@ h3 {
   color: var(--ink);
 }
 
-.gallery-grid figure {
-  margin: 0;
-  overflow: hidden;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-
-.gallery-grid img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.gallery-grid figcaption {
-  padding: 12px 14px;
-  color: var(--muted);
-  font-weight: 700;
-}
-
 .contact-section {
   padding-bottom: 64px;
 }
@@ -478,7 +458,6 @@ address {
   }
 
   .research-grid,
-  .gallery-grid,
   .media-grid,
   .media-section,
   .contact-section {
